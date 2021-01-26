@@ -1,0 +1,20 @@
+figure {
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 200px;
+  margin: auto;
+}
+
+img {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+}
+
+figcaption {
+  color: rgb(0, 0, 0);
+  font: bold smaller sans-serif;
+  padding-top: 3px;
+  text-align: center;
+}
