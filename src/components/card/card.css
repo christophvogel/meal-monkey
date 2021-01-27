@@ -1,6 +1,4 @@
 figure {
-  display: flex;
-  flex-flow: column;
   padding: 5px;
   max-width: 200px;
   margin: auto;
@@ -17,4 +15,11 @@ figcaption {
   font: bold smaller sans-serif;
   padding-top: 3px;
   text-align: center;
+}
+.card-container {
+  display: grid;
+  max-width: 90vw;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid hotpink;
 }
