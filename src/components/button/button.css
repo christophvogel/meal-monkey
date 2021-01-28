@@ -2,14 +2,14 @@
   border-radius: 40px;
   font-size: 16pt;
   color: white;
-  background: #fc6011;
+  background: var(--main-color);
   border: none;
   padding: 20px 140px;
 }
 .btn-brd {
-  color: #fc6011;
+  color: var(--main-color);
   background: #ffff;
-  border: #fc6011 solid 1px;
+  border: var(--main-color) solid 1px;
 }
 .btn-fb {
   background: #367fc0;
