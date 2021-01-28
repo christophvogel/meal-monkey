@@ -1,9 +1,7 @@
 figure {
-  display: flex;
-  flex-flow: column;
   padding: 5px;
-  max-width: 200px;
-  margin: auto;
+  max-width: 100px;
+  margin: 0;
 }
 
 img {
@@ -18,3 +16,14 @@ figcaption {
   padding-top: 3px;
   text-align: center;
 }
+.card-container {
+  display: grid;
+
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  overflow-x: auto;
+}
+/* 
+.card-container::-webkit-scrollbar {
+  display: none;
+} */
