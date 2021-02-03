@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-
+@font-face {
+  font-family: "Metropolis";
+  src: url("./assets/metropolis.woff2") format("woff2"),
+    url("./assets/metropolis.woff") format("woff"),
+    url("./assets/metropolis.ttf") format("ttf");
+}
 *,
 *::after,
 *::before {
@@ -16,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Metropolis", sans-serif;
   margin: 0;
 }
 
@@ -26,7 +30,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 
 a,
