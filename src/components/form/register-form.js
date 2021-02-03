@@ -30,7 +30,7 @@ export function createRegisterForm() {
   const input = document.createElement("input");
   input.type = "text";
   input.placeholder = "Email";
-  input.className = "btn-input";
+  input.className = "input";
 
   form.append(title, text, input, button);
 

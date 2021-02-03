@@ -6,3 +6,12 @@
   border: none;
   padding: 20px 140px;
 }
+
+.input {
+  border-radius: 40px;
+  font-size: 16pt;
+  color: rgb(0, 0, 0);
+  background: var(--input-backround-color);
+  border: none;
+  padding: 20px 140px;
+}
