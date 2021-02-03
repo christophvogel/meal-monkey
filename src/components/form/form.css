@@ -1,2 +1,19 @@
 .form {
+  display: grid;
+  grid-row-gap: 1em;
+  text-align: center;
+}
+
+.form .input {
+  margin-top: 2em;
+}
+
+.btn-OTP {
+  background: var(--input-backround-color);
+  border-radius: 10px;
+  /* padding: 50px;
+  margin-left: 100px;
+  margin-right: 100px; */
+  height: 70px;
+  width: 70px;
 }
