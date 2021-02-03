@@ -2,26 +2,48 @@ export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "form";
 
-  const OTPtext = document.createElement("h2");
-  OTPtext.innerText = "We have sent an OTP to your Mobile";
+  const title = document.createElement("h2");
+  title.innerText = "We have sent an OTP to your Mobile";
 
-  const checkmobile = document.createElement("p");
-  checkmobile.innerText =
+  const text = document.createElement("p");
+  text.innerText =
     "Please check your mobile number 071*****12 continue to reset your password";
 
-  const OTP = document.createElement("OTP");
-  OTP.innerText = "*";
-  OTP.className = "btn-OTP";
+  const otpOne = document.createElement("input");
+  otpOne.type = "password";
+  otpOne.placeholder = "*";
+  otpOne.className = "input";
+  const otpTwo = document.createElement("input");
+  otpTwo.type = "password";
+  otpTwo.placeholder = "*";
+  otpTwo.className = "input";
+  const otpThree = document.createElement("input");
+  otpThree.type = "password";
+  otpThree.placeholder = "*";
+  otpThree.className = "input";
+  const otpFour = document.createElement("input");
+  otpFour.type = "password";
+  otpFour.placeholder = "*";
+  otpFour.className = "input";
 
-  const OTP1 = document.createElement("OTP1");
-  OTP1.innerText = "*";
-  OTP1.className = "btn-OTP";
+  const passwordContainer = document.createElement("div");
+  passwordContainer.className = "form__otp";
+  passwordContainer.append(otpOne, otpTwo, otpThree, otpFour);
 
   const button = document.createElement("button");
   button.innerText = "Next";
   button.className = "btn";
 
-  form.append(OTPtext, checkmobile, OTP, OTP1, button);
+  const hint = document.createElement("p");
+  hint.innerText = "Didn't Receive?";
+  hint.className = "form__hint";
 
+  const resendLink = document.createElement("a");
+  resendLink.innerText = "Click Here";
+  resendLink.href = "#";
+
+  hint.append(resendLink);
+
+  form.append(title, text, passwordContainer, button, hint);
   return form;
 }
