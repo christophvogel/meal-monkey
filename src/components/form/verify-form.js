@@ -1,11 +1,15 @@
-function createOTPInputElement() {
-  const input = document.createElement("input");
-  input.type = "password";
-  input.placeholder = "*";
-  input.className = "input";
+import { createElement } from "../../utils/createElement";
 
+function createOTPInputElement() {
+  const input = createElement("input", {
+    className: "input",
+    placeholder: "*",
+    type: "password",
+    maxLength: 1,
+  });
   return input;
 }
+
 export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "form";
@@ -21,10 +25,10 @@ export function createVerifyForm() {
   const otpTwo = createOTPInputElement();
   const otpThree = createOTPInputElement();
   const otpFour = createOTPInputElement();
-
-  const passwordContainer = document.createElement("div");
-  passwordContainer.className = "form__otp";
-  passwordContainer.append(otpOne, otpTwo, otpThree, otpFour);
+  const passwordContainer = createElement("div", {
+    className: "form__otp",
+    children: [otpOne, otpTwo, otpThree, otpFour],
+  });
 
   const button = document.createElement("button");
   button.innerText = "Next";
@@ -37,6 +41,19 @@ export function createVerifyForm() {
   const resendLink = document.createElement("a");
   resendLink.innerText = "Click Here";
   resendLink.href = "#";
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const secretPassword = "1234";
+    const OTPInput = `${otpOne.value}${otpTwo.value}${otpThree.value}${otpFour.value}`;
+
+    if (OTPInput === secretPassword) {
+      alert("Your OTP is: " + OTPInput + " - That is correct!");
+    } else {
+      alert("Your OTP is: " + OTPInput + " - That is WRONG");
+    }
+  });
 
   hint.append(resendLink);
 
